@@ -1,0 +1,157 @@
+/* ============================================================
+   TASK 3.3 — TYPOGRAPHY SYSTEM
+   Font pairing: Montserrat (headings) + Open Sans (body)
+   ============================================================ */
+
+:root {
+  /* Font families */
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body:    'Open Sans',  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Type scale */
+  --font-xs:   0.75rem;
+  --font-sm:   0.875rem;
+  --font-base: 1rem;
+  --font-lg:   1.125rem;
+  --font-xl:   1.25rem;
+  --font-2xl:  1.5rem;
+  --font-3xl:  1.875rem;
+  --font-4xl:  2.25rem;
+
+  /* Line heights */
+  --line-tight:  1.2;
+  --line-snug:   1.35;
+  --line-normal: 1.6;
+
+  /* Weights */
+  --w-regular:  400;
+  --w-medium:   500;
+  --w-semibold: 600;
+  --w-bold:     700;
+  --w-extrabold: 800;
+
+  /* Colors */
+  --color-heading: #0f172a;
+  --color-text:    #1e293b;
+  --color-muted:   #64748b;
+  --color-border:  #e2e8f0;
+  --color-bg:      #f8fafc;
+  --color-surface: #ffffff;
+  --color-primary: #3b82f6;
+  --color-accent-soft: #eff6ff;
+
+  /* Spacing */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { font-size: 100%; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-base);       /* 16px */
+  line-height: var(--line-normal);   /* 1.6 */
+  color: var(--color-text);
+  background: var(--color-bg);
+  padding: var(--space-6) var(--space-4);
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  line-height: var(--line-tight);
+  letter-spacing: -0.02em;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+h1 { font-size: var(--font-4xl); font-weight: var(--w-extrabold); margin-top: 0; }
+h2 { font-size: var(--font-3xl); font-weight: var(--w-bold); }
+h3 { font-size: var(--font-2xl); font-weight: var(--w-semibold); }
+h4 { font-size: var(--font-xl);  font-weight: var(--w-semibold); }
+h5 { font-size: var(--font-lg);  font-weight: var(--w-medium); text-transform: uppercase; letter-spacing: 0.04em; }
+h6 { font-size: var(--font-base); font-weight: var(--w-semibold); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); }
+
+/* --- Body --- */
+p {
+  font-size: var(--font-base);
+  line-height: var(--line-normal);
+  margin-bottom: var(--space-4);
+}
+
+.text-small { font-size: var(--font-sm); color: var(--color-muted); }
+
+/* --- Demo layout --- */
+.wrap { max-width: 720px; margin: 0 auto; background: var(--color-surface); padding: var(--space-6); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--font-xs);
+  font-weight: var(--w-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  background: var(--color-accent-soft);
+  padding: 0.3rem 0.9rem;
+  border-radius: 40px;
+  margin-bottom: var(--space-4);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: #eef2f6;
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  color: var(--color-heading);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-6) 0;
+}
+
+/* --- Scale table --- */
+.scale {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-4);
+  font-size: var(--font-sm);
+}
+.scale th,
+.scale td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+.scale th {
+  font-family: var(--font-heading);
+  font-size: var(--font-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  font-weight: var(--w-semibold);
+}
+.scale td:first-child {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+.scale td:nth-child(2) { color: var(--color-muted); white-space: nowrap; }
