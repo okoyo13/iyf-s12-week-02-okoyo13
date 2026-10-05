@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Practice · Task 4.2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="wrap">
+
+    <h1>Grid Practice</h1>
+    <p class="text-small">Task 4.2 — Photo Gallery, Magazine Layout, Project Cards</p>
+
+    <!-- ============ EXERCISE 1: PHOTO GALLERY ============ -->
+    <section>
+      <h2>Exercise 1 · Photo Gallery</h2>
+      <p>3 columns, equal widths, consistent gap, images fill their cells.</p>
+
+      <div class="gallery">
+        <img src="https://picsum.photos/id/1015/400/300" alt="Mountain">
+        <img src="https://picsum.photos/id/1043/400/300" alt="Forest">
+        <img src="https://picsum.photos/id/1029/400/300" alt="Coast">
+        <img src="https://picsum.photos/id/1036/400/300" alt="Lake">
+        <img src="https://picsum.photos/id/1039/400/300" alt="Valley">
+        <img src="https://picsum.photos/id/1041/400/300" alt="Ridge">
+      </div>
+
+      <p class="note">
+        <code>display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;</code>
+      </p>
+    </section>
+
+    <!-- ============ EXERCISE 2: MAGAZINE LAYOUT ============ -->
+    <section>
+      <h2>Exercise 2 · Magazine Layout</h2>
+      <p>Header spans full width, sidebar + main content side by side, footer spans full width.</p>
+
+      <div class="magazine">
+        <header class="mag-header">
+          <strong>Header</strong> — spans full width
+        </header>
+
+        <aside class="mag-sidebar">
+          <strong>Sidebar</strong>
+          <p>Navigation, related links, or ads would live here.</p>
+        </aside>
+
+        <main class="mag-main">
+          <strong>Main Content</strong>
+          <p>Article body, images, and long-form content would go in this column. The magazine layout uses named grid areas so the arrangement is readable in the CSS.</p>
+          <p>The header and footer span the full width thanks to <code>grid-column: 1 / -1</code> (or named areas).</p>
+        </main>
+
+        <footer class="mag-footer">
+          <strong>Footer</strong> — spans full width
+        </footer>
+      </div>
+
+      <p class="note">
+        <code>grid-template-areas: "header header" "sidebar main" "footer footer";</code>
+      </p>
+    </section>
+
+    <!-- ============ EXERCISE 3: RESPONSIVE PROJECT CARDS ============ -->
+    <section>
+      <h2>Exercise 3 · Project Cards Grid</h2>
+      <p>3 columns on desktop · 2 on tablet · 1 on mobile. Resize the window to see it change.</p>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1015/400/240" alt="Summit Dashboard">
+          <div class="card-body">
+            <h3>Summit Dashboard</h3>
+            <p>Analytics for outdoor enthusiasts.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1043/400/240" alt="Trailhead">
+          <div class="card-body">
+            <h3>Trailhead Brand</h3>
+            <p>Identity for a hiking startup.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1029/400/240" alt="Coastal App">
+          <div class="card-body">
+            <h3>Coastal App</h3>
+            <p>Weather companion for surfers.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1036/400/240" alt="Lake">
+          <div class="card-body">
+            <h3>Lake Trails</h3>
+            <p>Interactive map for hikers.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1039/400/240" alt="Valley">
+          <div class="card-body">
+            <h3>Valley Guide</h3>
+            <p>Local discovery app.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1041/400/240" alt="Ridge">
+          <div class="card-body">
+            <h3>Ridge Notes</h3>
+            <p>Field journal for naturalists.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="note">
+        <code>grid-template-columns: 1fr;</code> → <code>repeat(2, 1fr)</code> at 640px →
+        <code>repeat(3, 1fr)</code> at 1024px
+      </p>
+    </section>
+
+  </div>
+
+</body>
+</html>
