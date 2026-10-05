@@ -1,0 +1,137 @@
+   :root {
+      /* Font family: Arimo from Google Fonts, with system fallbacks */
+      --font-primary: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+      /* Base font size: exactly 16px */
+      --font-size-base: 16px;
+
+      /* Line height: 1.6 for comfortable reading */
+      --line-height-base: 1.6;
+
+      /* Font colors – carefully chosen for contrast and hierarchy */
+      --color-text-primary: #1e1e2f;      /* deep slate for body text */
+      --color-text-secondary: #2d3e50;    /* slightly lighter for secondary elements */
+      --color-heading: #0b1c2e;           /* dark navy for headings – strong, readable */
+      --color-muted: #5e6f7e;             /* muted gray-blue for small text or subtle elements */
+      --color-link: #1e5f8e;              /* accessible blue for potential links */
+    }
+
+    /* Apply base styles to all elements (box-sizing, margin reset) */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      font-size: 1rem;                   /* 16px */
+      line-height: var(--line-height-base); /* 1.6 */
+      color: var(--color-text-primary);
+      background-color: #fafbfc;         /* soft background for demo */
+      padding: 2rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ----- HEADING SYSTEM (h1–h6) ----- */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-primary);
+      color: var(--color-heading);
+      font-weight: 700;                  /* bold weight for all headings by default */
+      line-height: 1.25;                 /* tighter line-height for large headings */
+      margin-top: 0;
+      margin-bottom: 0.5em;              /* consistent bottom margin */
+      letter-spacing: -0.01em;           /* slight optical adjustment */
+    }
+
+    /* Individual heading sizes – using rem units based on 16px root */
+    h1 {
+      font-size: 2.5rem;                 /* 40px */
+      font-weight: 700;
+      margin-bottom: 0.4em;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 2rem;                   /* 32px */
+      font-weight: 700;
+      margin-bottom: 0.45em;
+    }
+
+    h3 {
+      font-size: 1.75rem;                /* 28px */
+      font-weight: 600;                  /* semi-bold variation */
+      margin-bottom: 0.5em;
+    }
+
+    h4 {
+      font-size: 1.5rem;                 /* 24px */
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+
+    h5 {
+      font-size: 1.25rem;                /* 20px */
+      font-weight: 500;                  /* medium weight */
+      margin-bottom: 0.55em;
+      text-transform: uppercase;         /* small stylistic touch for h5 */
+      letter-spacing: 0.02em;
+    }
+
+    h6 {
+      font-size: 1.125rem;               /* 18px */
+      font-weight: 500;
+      margin-bottom: 0.6em;
+      color: var(--color-text-secondary); /* subtle variation */
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* ----- ADDITIONAL TYPOGRAPHY ELEMENTS (for demonstration context) ----- */
+    p {
+      margin-bottom: 1.25rem;            /* consistent paragraph spacing */
+      color: var(--color-text-primary);
+    }
+
+    /* Muted text style (for metadata, small notes) */
+    .muted {
+      color: var(--color-muted);
+      font-size: 0.875rem;               /* 14px */
+      line-height: 1.5;
+    }
+
+    /* A simple container to showcase typography */
+    .typography-demo {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem 2rem;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Divider for visual separation */
+    hr {
+      border: none;
+      border-top: 2px solid #e9ecf0;
+      margin: 2rem 0;
+    }
+
+    /* Small caption to indicate font usage */
+    .font-badge {
+      display: inline-block;
+      background: #f0f3f7;
+      padding: 0.25rem 0.75rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #1e2b3a;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+ 
