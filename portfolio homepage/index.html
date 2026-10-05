@@ -5,62 +5,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex Morgan · Portfolio</title>
 
-  <!-- Google Fonts: Montserrat (headings) + Open Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Main portfolio stylesheet (Tasks 3.1, 3.3, 3.4) -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="hero">
-    <span class="eyebrow">Portfolio · 2025</span>
-    <h1>Alex Morgan</h1>
-    <p>Product designer &amp; front-end developer crafting thoughtful digital experiences.</p>
+  <!-- ============ NAVIGATION (mobile-first, CSS-only hamburger) ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="logo">Alex<span>Morgan</span></a>
+
+      <!-- Checkbox hack: no JS required -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container">
+  <main>
 
-    <section>
-      <h2>Selected Work</h2>
-      <div class="project-grid">
+    <!-- ============ HERO (stacks on mobile, splits on desktop) ============ -->
+    <section class="hero container">
+      <div class="hero-text">
+        <span class="eyebrow">Portfolio · 2025</span>
+        <h1>Designing and building thoughtful digital experiences.</h1>
+        <p>I'm Alex Morgan — a product designer and front-end developer with 8+ years creating accessible, systems-driven interfaces.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn">View work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://picsum.photos/id/1015/640/640" alt="Mountain landscape">
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS GRID (1 → 2 → 3 columns) ============ -->
+    <section id="work" class="container section">
+      <header class="section-header">
+        <h2>Selected Work</h2>
+        <p class="text-small">A few recent projects</p>
+      </header>
+
+      <div class="projects-grid">
         <article class="project-card">
-          <img src="https://picsum.photos/id/1015/400/200" alt="Mountain landscape">
+          <img src="https://picsum.photos/id/1015/400/240" alt="Summit Dashboard">
           <div class="card-body">
             <h3>Summit Dashboard</h3>
-            <p>Real-time analytics dashboard for outdoor enthusiasts.</p>
-            <a href="#" class="btn">View project</a>
+            <p>Real-time analytics for outdoor enthusiasts.</p>
+            <a href="#" class="card-link">View project →</a>
           </div>
         </article>
+
         <article class="project-card">
-          <img src="https://picsum.photos/id/1043/400/200" alt="Forest path">
+          <img src="https://picsum.photos/id/1043/400/240" alt="Trailhead Brand">
           <div class="card-body">
             <h3>Trailhead Brand</h3>
             <p>Brand identity and design system for a hiking startup.</p>
-            <a href="#" class="btn">View project</a>
+            <a href="#" class="card-link">View project →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1029/400/240" alt="Coastal App">
+          <div class="card-body">
+            <h3>Coastal App</h3>
+            <p>Mobile-first weather companion for surfers.</p>
+            <a href="#" class="card-link">View project →</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section>
-      <h2>About</h2>
-      <p>I'm a designer and developer with 8+ years building digital products. I specialize in design systems, accessible interfaces, and bridging design and engineering.</p>
-      <p class="text-small">Currently based in Portland, Oregon.</p>
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="container section">
+      <header class="section-header">
+        <h2>About</h2>
+      </header>
+      <div class="about-grid">
+        <div>
+          <p>I specialize in design systems, accessible interfaces, and bridging the gap between design and engineering. Currently based in Portland, Oregon — working with teams worldwide.</p>
+        </div>
+        <ul class="skill-list">
+          <li>Figma</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>CSS</li>
+          <li>Design Systems</li>
+          <li>Accessibility</li>
+        </ul>
+      </div>
     </section>
 
-    <section>
-      <h2>Get in Touch</h2>
-      <p>Interested in working together? <a href="#">Send me a message</a>.</p>
-      <button class="btn">Contact me</button>
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="container section">
+      <header class="section-header">
+        <h2>Get in Touch</h2>
+      </header>
+      <div class="contact-grid">
+        <form class="contact-form" onsubmit="event.preventDefault();">
+          <label>
+            Name
+            <input type="text" placeholder="Your name">
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="you@example.com">
+          </label>
+          <label>
+            Message
+            <textarea rows="4" placeholder="Tell me about your project…"></textarea>
+          </label>
+          <button type="submit" class="btn">Send message</button>
+        </form>
+        <aside class="contact-sidebar">
+          <h3>Elsewhere</h3>
+          <ul class="link-list">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Dribbble</a></li>
+            <li><a href="#">Email</a></li>
+          </ul>
+        </aside>
+      </div>
     </section>
 
   </main>
 
-  <footer>
-    <p class="text-small">© 2025 Alex Morgan · Built with a modular type scale</p>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="text-small">© 2025 Alex Morgan · Built with a modular type scale</p>
+      <ul class="footer-links">
+        <li><a href="flexbox-practice/">Flexbox</a></li>
+        <li><a href="grid-practice/">Grid</a></li>
+        <li><a href="box-model-practice/">Box Model</a></li>
+        <li><a href="typography-system/">Typography</a></li>
+      </ul>
+    </div>
   </footer>
 
 </body>
