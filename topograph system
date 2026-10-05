@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio · Typography System</title>
+  
+  <!-- Google Fonts: Montserrat (heading) + Open Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ============================================
+       TYPOGRAPHY SYSTEM — PORTFOLIO
+       Font pairing: Montserrat (headings) + Open Sans (body)
+       Type scale based on 16px base, ratio ~1.125 (Major Second)
+       ============================================ */
+    
+    :root {
+      /* ----- FONT FAMILIES ----- */
+      --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      
+      /* ----- TYPE SCALE (modular scale, base 16px) ----- */
+      --font-xs: 0.75rem;    /* 12px */
+      --font-sm: 0.875rem;   /* 14px */
+      --font-base: 1rem;     /* 16px */
+      --font-lg: 1.125rem;   /* 18px */
+      --font-xl: 1.25rem;    /* 20px */
+      --font-2xl: 1.5rem;    /* 24px */
+      --font-3xl: 1.875rem;  /* 30px */
+      --font-4xl: 2.25rem;   /* 36px */
+      
+      /* ----- LINE HEIGHTS ----- */
+      --line-tight: 1.2;
+      --line-snug: 1.35;
+      --line-normal: 1.6;
+      --line-relaxed: 1.7;
+      
+      /* ----- FONT WEIGHTS ----- */
+      --weight-regular: 400;
+      --weight-medium: 500;
+      --weight-semibold: 600;
+      --weight-bold: 700;
+      --weight-extrabold: 800;
+      
+      /* ----- COLORS (portfolio palette) ----- */
+      --color-ink: #0f172a;          /* deepest navy for headings */
+      --color-body: #1e293b;         /* slate for body text */
+      --color-muted: #64748b;        /* muted gray-blue for secondary */
+      --color-accent: #3b82f6;       /* vibrant blue accent */
+      --color-accent-soft: #eff6ff;  /* soft blue background */
+      --color-surface: #ffffff;
+      --color-bg: #f8fafc;
+      --color-border: #e2e8f0;
+      
+      /* ----- SPACING (for rhythm) ----- */
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.5rem;
+      --space-6: 2rem;
+      --space-7: 2.5rem;
+      --space-8: 3rem;
+    }
+    
+    /* ----- GLOBAL RESET ----- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      font-size: 100%; /* 16px base */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      font-size: var(--font-base);
+      line-height: var(--line-normal);
+      color: var(--color-body);
+      background-color: var(--color-bg);
+      padding: var(--space-6) var(--space-4);
+    }
+    
+    /* ============================================
+       HEADING SYSTEM (Montserrat)
+       ============================================ */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      color: var(--color-ink);
+      font-weight: var(--weight-bold);
+      line-height: var(--line-tight);
+      letter-spacing: -0.02em;
+      margin-top: 0;
+      margin-bottom: var(--space-3);
+    }
+    
+    h1 {
+      font-size: var(--font-4xl);    /* 36px */
+      font-weight: var(--weight-extrabold);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: var(--space-4);
+    }
+    
+    h2 {
+      font-size: var(--font-3xl);    /* 30px */
+      font-weight: var(--weight-bold);
+      line-height: var(--line-tight);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-3);
+    }
+    
+    h3 {
+      font-size: var(--font-2xl);    /* 24px */
+      font-weight: var(--weight-semibold);
+      line-height: var(--line-snug);
+      letter-spacing: -0.01em;
+      margin-bottom: var(--space-3);
+    }
+    
+    h4 {
+      font-size: var(--font-xl);     /* 20px */
+      font-weight: var(--weight-semibold);
+      line-height: var(--line-snug);
+      margin-bottom: var(--space-2);
+    }
+    
+    h5 {
+      font-size: var(--font-lg);     /* 18px */
+      font-weight: var(--weight-medium);
+      line-height: var(--line-snug);
+      margin-bottom: var(--space-2);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    
+    h6 {
+      font-size: var(--font-base);   /* 16px */
+      font-weight: var(--weight-semibold);
+      line-height: var(--line-snug);
+      margin-bottom: var(--space-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-muted);
+    }
+    
+    /* ============================================
+       BODY TEXT & SMALL TEXT
+       ============================================ */
+    p {
+      font-size: var(--font-base);   /* 16px */
+      line-height: var(--line-normal);
+      color: var(--color-body);
+      margin-bottom: var(--space-4);
+    }
+    
+    .text-small,
+    small {
+      font-size: var(--font-sm);    /* 14px */
+      line-height: var(--line-normal);
+      color: var(--color-muted);
+    }
+    
+    .text-xs {
+      font-size: var(--font-xs);    /* 12px */
+      line-height: var(--line-normal);
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: var(--weight-semibold);
+    }
+    
+    .text-large {
+      font-size: var(--font-lg);    /* 18px */
+      line-height: var(--line-relaxed);
+      color: var(--color-body);
+    }
+    
+    .text-accent {
+      color: var(--color-accent);
+      font-weight: var(--weight-semibold);
+    }
+    
+    /* ============================================
+       PORTFOLIO DEMO LAYOUT
+       ============================================ */
+    .portfolio {
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      border-radius: 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    
+    /* ----- HERO SECTION ----- */
+    .hero {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: var(--space-8) var(--space-6) var(--space-7);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    
+    .hero .eyebrow {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: var(--font-xs);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #94a3b8;
+      margin-bottom: var(--space-4);
+      background: rgba(255,255,255,0.06);
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    
+    .hero h1 {
+      color: #ffffff;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var(--font-4xl);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+    
+    .hero p {
+      color: #94a3b8;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var(--font-lg);
+      line-height: var(--line-relaxed);
+      margin-bottom: 0;
+    }
+    
+    /* ----- MAIN CONTENT AREA ----- */
+    .main-content {
+      padding: var(--space-7) var(--space-6) var(--space-8);
+    }
+    
+    /* ----- SECTION STYLES ----- */
+    .section {
+      margin-bottom: var(--space-8);
+    }
+    
+    .section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-bottom: var(--space-5);
+      padding-bottom: var(--space-3);
+      border-bottom: 2px solid var(--color-border);
+    }
+    
+    .section-header h2 {
+      margin-bottom: 0;
+      font-size: var(--font-3xl);
+      color: var(--color-ink);
+    }
+    
+    .section-header .section-label {
+      font-size: var(--font-xs);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-muted);
+    }
+    
+    /* ----- PROJECT GRID ----- */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-5);
+    }
+    
+    @media (max-width: 600px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .project-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.1);
+      border-color: #cbd5e1;
+    }
+    
+    .project-card .card-image {
+      display: block;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      background: #e2e8f0;
+    }
+    
+    .project-card .card-body {
+      padding: var(--space-4) var(--space-4) var(--space-5);
+    }
+    
+    .project-card h3 {
+      font-size: var(--font-xl);
+      font-weight: var(--weight-semibold);
+      margin-bottom: var(--space-2);
+      color: var(--color-ink);
+    }
+    
+    .project-card p {
+      font-size: var(--font-sm);
+      line-height: var(--line-normal);
+      color: var(--color-muted);
+      margin-bottom: var(--space-3);
+    }
+    
+    .project-card .tag {
+      display: inline-block;
+      font-size: var(--font-xs);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--color-accent);
+      background: var(--color-accent-soft);
+      padding: 0.25rem 0.75rem;
+      border-radius: 40px;
+    }
+    
+    /* ----- SKILLS / BIO ----- */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-6);
+    }
+    
+    @media (max-width: 640px) {
+      .bio-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+      }
+    }
+    
+    .bio-text p {
+      font-size: var(--font-base);
+      line-height: var(--line-relaxed);
+      color: var(--color-body);
+    }
+    
+    .bio-text p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    
+    .skill-list li {
+      font-size: var(--font-sm);
+      font-weight: var(--weight-medium);
+      color: var(--color-body);
+      background: var(--color-bg);
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      border: 1px solid var(--color-border);
+      transition: background 0.15s;
+    }
+    
+    .skill-list li:hover {
+      background: var(--color-accent-soft);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    
+    /* ----- CONTACT / FOOTER ----- */
+    .footer {
+      background: var(--color-bg);
+      padding: var(--space-6);
+      text-align: center;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .footer p {
+      font-size: var(--font-sm);
+      color: var(--color-muted);
+      margin-bottom: var(--space-2);
+    }
+    
+    .footer .btn {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: var(--font-sm);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      background: var(--color-accent);
+      padding: 0.75rem 2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      margin-top: var(--space-3);
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .footer .btn:hover {
+      background: #2563eb;
+      transform: scale(1.02);
+    }
+    
+    /* ----- TYPE SCALE REFERENCE (visual aid) ----- */
+    .scale-reference {
+      background: var(--color-bg);
+      border-radius: 20px;
+      padding: var(--space-5);
+      margin-top: var(--space-7);
+      border: 1px solid var(--color-border);
+    }
+    
+    .scale-reference h4 {
+      font-size: var(--font-lg);
+      font-weight: var(--weight-semibold);
+      color: var(--color-ink);
+      margin-bottom: var(--space-4);
+      font-family: var(--font-heading);
+    }
+    
+    .scale-row {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-4);
+      padding: var(--space-2) 0;
+      border-bottom: 1px solid var(--color-border);
+      flex-wrap: wrap;
+    }
+    
+    .scale-row:last-child {
+      border-bottom: none;
+    }
+    
+    .scale-label {
+      font-family: var(--font-heading);
+      font-size: var(--font-xs);
+      font-weight: var(--weight-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+      min-width: 100px;
+      flex-shrink: 0;
+    }
+    
+    .scale-sample {
+      font-family: var(--font-body);
+      color: var(--color-body);
+    }
+    
+    .scale-sample.heading {
+      font-family: var(--font-heading);
+      color: var(--color-ink);
+    }
+    
+    /* utility */
+    .mt-4 { margin-top: var(--space-4); }
+    .mb-4 { margin-bottom: var(--space-4); }
+    .text-center { text-align: center; }
+  </style>
+</head>
+<body>
+  
+  <div class="portfolio">
+    
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <span class="eyebrow">Portfolio 2025</span>
+      <h1>Alex Morgan</h1>
+      <p>Product designer &amp; front-end developer crafting thoughtful digital experiences.</p>
+    </header>
+    
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+      
+      <!-- --- Selected Work --- -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Selected Work</h2>
+          <span class="section-label">Projects</span>
+        </div>
+        
+        <div class="project-grid">
+          <article class="project-card">
+            <img 
+              class="card-image" 
+              src="https://picsum.photos/id/1015/400/160" 
+              alt="Mountain landscape"
+              loading="lazy"
+            >
+            <div class="card-body">
+              <h3>Summit Dashboard</h3>
+              <p>A real-time analytics dashboard for outdoor enthusiasts, built with React and D3.</p>
+              <span class="tag">Web App</span>
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <img 
+              class="card-image" 
+              src="https://picsum.photos/id/1043/400/160" 
+              alt="Forest path"
+              loading="lazy"
+            >
+            <div class="card-body">
+              <h3>Trailhead Brand</h3>
+              <p>Complete brand identity and design system for a sustainable hiking startup.</p>
+              <span class="tag">Branding</span>
+            </div>
+          </article>
+        </div>
+      </section>
+      
+      <!-- --- About / Bio --- -->
+      <section class="section">
+        <div class="section-header">
+          <h2>About</h2>
+          <span class="section-label">Background</span>
+        </div>
+        
+        <div class="bio-grid">
+          <div class="bio-text">
+            <p>I'm a designer and developer with over 8 years of experience building digital products. I specialize in design systems, accessible interfaces, and bridging the gap between design and engineering.</p>
+            <p>Currently based in Portland, Oregon — working with teams worldwide to create meaningful digital experiences.</p>
+          </div>
+          
+          <div>
+            <h4 class="mb-4" style="font-family: var(--font-heading);">Toolbox</h4>
+            <ul class="skill-list">
+              <li>Figma</li>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>CSS</li>
+              <li>Design Systems</li>
+              <li>Accessibility</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- --- Typography Scale Reference (Visual Aid) --- -->
+      <section class="section">
+        <div class="scale-reference">
+          <h4>📐 Type Scale Reference</h4>
+          <div class="scale-row">
+            <span class="scale-label">--font-4xl</span>
+            <span class="scale-sample heading" style="font-size: var(--font-4xl); font-weight: 700; line-height: 1.15;">Heading 1 — 36px</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-label">--font-3xl</span>
+            <span class="scale-sample heading" style="font-size: var(--font-3xl); font-weight: 700;">Heading 2 — 30px</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-label">--font-2xl</span>
+            <span class="scale-sample heading" style="font-size: var(--font-2xl); font-weight: 600;">Heading 3 — 24px</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-label">--font-xl</span>
+            <span class="scale-sample heading" style="font-size: var(--font-xl); font-weight: 600;">Heading 4 — 20px</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-label">--font-lg</span>
+            <span class="scale-sample" style="font-size: var(--font-lg);">Large body — 18px</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-label">--font-base</span>
+            <span class="scale-sample" style="font-size: var(--font-base);">Body text — 16px (base)</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-label">--font-sm</span>
+            <span class="scale-sample" style="font-size: var(--font-sm); color: var(--color-muted);">Small text — 14px</span>
+          </div>
+          <div class="scale-row">
+            <span class="scale-label">--font-xs</span>
+            <span class="scale-sample" style="font-size: var(--font-xs); color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em;">Extra small — 12px</span>
+          </div>
+          <p class="text-xs" style="margin-top: var(--space-4); margin-bottom: 0; color: var(--color-muted);">
+            Fonts: Montserrat (headings) · Open Sans (body)
+          </p>
+        </div>
+      </section>
+      
+    </div>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>Interested in working together?</p>
+      <a href="#" class="btn" onclick="return false;">Get in touch</a>
+      <p style="margin-top: var(--space-3); font-size: var(--font-xs); color: var(--color-muted);">
+        © 2025 Alex Morgan · Built with a modular type scale
+      </p>
+    </footer>
+    
+  </div>
+  
+</body>
+</html>
