@@ -3,81 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Box Model Practice · Task 3.2</title>
+  <title>Alex Morgan · Portfolio</title>
+
+  <!-- Google Fonts: Montserrat (headings) + Open Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main portfolio stylesheet (Tasks 3.1, 3.3, 3.4) -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="wrap">
+  <header class="hero">
+    <span class="eyebrow">Portfolio · 2025</span>
+    <h1>Alex Morgan</h1>
+    <p>Product designer &amp; front-end developer crafting thoughtful digital experiences.</p>
+  </header>
 
-    <h1>Box Model Practice</h1>
-    <p class="text-small">Task 3.2 — Three exercises</p>
+  <main class="container">
 
-    <!-- ============ EXERCISE 1 ============ -->
     <section>
-      <h2>Exercise 1 · Box Model Visualization</h2>
-      <p>Four boxes showing content, padding, border, and margin.</p>
-
-      <div class="box-row">
-        <div class="box-wrapper"><div class="box">Box 1</div></div>
-        <div class="box-wrapper"><div class="box">Box 2</div></div>
-        <div class="box-wrapper"><div class="box">Box 3</div></div>
-        <div class="box-wrapper"><div class="box">Box 4</div></div>
-      </div>
-
-      <p class="note">
-        <strong>Content</strong> (blue) → <strong>padding</strong> (transparent, inside border) →
-        <strong>border</strong> (dark blue) → <strong>margin</strong> (gap between boxes).
-      </p>
-    </section>
-
-    <!-- ============ EXERCISE 2 ============ -->
-    <section>
-      <h2>Exercise 2 · Debug the Layout</h2>
-      <p>Both boxes have <code>width: 300px</code> and <code>padding: 20px</code>. One is broken; one is fixed.</p>
-
-      <div class="debug-row">
-        <div>
-          <h3>❌ Broken</h3>
-          <div class="broken-box">
-            Total = <strong>340px</strong><br>
-            <span class="text-small">content-box adds padding to width</span>
+      <h2>Selected Work</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1015/400/200" alt="Mountain landscape">
+          <div class="card-body">
+            <h3>Summit Dashboard</h3>
+            <p>Real-time analytics dashboard for outdoor enthusiasts.</p>
+            <a href="#" class="btn">View project</a>
           </div>
-        </div>
-        <div>
-          <h3>✓ Fixed</h3>
-          <div class="fixed-box">
-            Total = <strong>300px</strong><br>
-            <span class="text-small">border-box includes padding</span>
+        </article>
+        <article class="project-card">
+          <img src="https://picsum.photos/id/1043/400/200" alt="Forest path">
+          <div class="card-body">
+            <h3>Trailhead Brand</h3>
+            <p>Brand identity and design system for a hiking startup.</p>
+            <a href="#" class="btn">View project</a>
           </div>
-        </div>
+        </article>
       </div>
-
-      <p class="note">
-        <strong>Fix:</strong> add <code>box-sizing: border-box;</code> to <code>.broken-box</code>.
-      </p>
     </section>
 
-    <!-- ============ EXERCISE 3 ============ -->
     <section>
-      <h2>Exercise 3 · Card Component</h2>
-      <p>Total width 300px · padding 20px · border 1px solid gray · image full width · title 15px margin-bottom.</p>
-
-      <div class="card">
-        <img class="card-img" src="https://picsum.photos/id/1015/300/160" alt="Mountain landscape">
-        <div class="card-inner">
-          <h3>Mountain Serenity</h3>
-          <p>Discover the quiet beauty of alpine landscapes. This card follows the exact spacing spec.</p>
-          <button class="btn">Explore</button>
-          <p class="text-xs card-note">300px total · 20px padding · 1px border</p>
-        </div>
-      </div>
+      <h2>About</h2>
+      <p>I'm a designer and developer with 8+ years building digital products. I specialize in design systems, accessible interfaces, and bridging design and engineering.</p>
+      <p class="text-small">Currently based in Portland, Oregon.</p>
     </section>
 
-  </div>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>Interested in working together? <a href="#">Send me a message</a>.</p>
+      <button class="btn">Contact me</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="text-small">© 2025 Alex Morgan · Built with a modular type scale</p>
+  </footer>
 
 </body>
 </html>
