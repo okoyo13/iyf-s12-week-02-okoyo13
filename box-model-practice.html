@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Practice · Task 3.2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="wrap">
+
+    <h1>Box Model Practice</h1>
+    <p class="text-small">Task 3.2 — Three exercises</p>
+
+    <!-- ============ EXERCISE 1 ============ -->
+    <section>
+      <h2>Exercise 1 · Box Model Visualization</h2>
+      <p>Four boxes showing content, padding, border, and margin.</p>
+
+      <div class="box-row">
+        <div class="box-wrapper"><div class="box">Box 1</div></div>
+        <div class="box-wrapper"><div class="box">Box 2</div></div>
+        <div class="box-wrapper"><div class="box">Box 3</div></div>
+        <div class="box-wrapper"><div class="box">Box 4</div></div>
+      </div>
+
+      <p class="note">
+        <strong>Content</strong> (blue) → <strong>padding</strong> (transparent, inside border) →
+        <strong>border</strong> (dark blue) → <strong>margin</strong> (gap between boxes).
+      </p>
+    </section>
+
+    <!-- ============ EXERCISE 2 ============ -->
+    <section>
+      <h2>Exercise 2 · Debug the Layout</h2>
+      <p>Both boxes have <code>width: 300px</code> and <code>padding: 20px</code>. One is broken; one is fixed.</p>
+
+      <div class="debug-row">
+        <div>
+          <h3>❌ Broken</h3>
+          <div class="broken-box">
+            Total = <strong>340px</strong><br>
+            <span class="text-small">content-box adds padding to width</span>
+          </div>
+        </div>
+        <div>
+          <h3>✓ Fixed</h3>
+          <div class="fixed-box">
+            Total = <strong>300px</strong><br>
+            <span class="text-small">border-box includes padding</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        <strong>Fix:</strong> add <code>box-sizing: border-box;</code> to <code>.broken-box</code>.
+      </p>
+    </section>
+
+    <!-- ============ EXERCISE 3 ============ -->
+    <section>
+      <h2>Exercise 3 · Card Component</h2>
+      <p>Total width 300px · padding 20px · border 1px solid gray · image full width · title 15px margin-bottom.</p>
+
+      <div class="card">
+        <img class="card-img" src="https://picsum.photos/id/1015/300/160" alt="Mountain landscape">
+        <div class="card-inner">
+          <h3>Mountain Serenity</h3>
+          <p>Discover the quiet beauty of alpine landscapes. This card follows the exact spacing spec.</p>
+          <button class="btn">Explore</button>
+          <p class="text-xs card-note">300px total · 20px padding · 1px border</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
