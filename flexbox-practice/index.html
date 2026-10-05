@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Practice · Task 4.1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="wrap">
+
+    <h1>Flexbox Practice</h1>
+    <p class="text-small">Task 4.1 — Navigation, Card Row, Footer</p>
+
+    <!-- ============ EXERCISE 1: NAV BAR ============ -->
+    <section>
+      <h2>Exercise 1 · Navigation Bar</h2>
+      <p>Logo left, links right, vertically centered, spacing between links.</p>
+
+      <nav class="demo-nav">
+        <div class="logo">Logo</div>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <p class="note"><code>display: flex; justify-content: space-between; align-items: center;</code></p>
+    </section>
+
+    <!-- ============ EXERCISE 2: CARD ROW ============ -->
+    <section>
+      <h2>Exercise 2 · Card Row</h2>
+      <p>Three evenly-spaced cards with equal heights, wrapping on smaller screens.</p>
+
+      <div class="card-row">
+        <article class="demo-card">
+          <h3>Card One</h3>
+          <p>Evenly spaced with <code>gap</code>.</p>
+        </article>
+        <article class="demo-card">
+          <h3>Card Two</h3>
+          <p>Equal heights because of <code>align-items: stretch</code>.</p>
+        </article>
+        <article class="demo-card">
+          <h3>Card Three</h3>
+          <p>Wraps to the next line with <code>flex-wrap: wrap</code>.</p>
+        </article>
+      </div>
+
+      <p class="note"><code>display: flex; gap: 1.5rem; flex-wrap: wrap;</code></p>
+    </section>
+
+    <!-- ============ EXERCISE 3: FOOTER ============ -->
+    <section>
+      <h2>Exercise 3 · Footer Layout</h2>
+      <p>Three columns, then a centered copyright line below.</p>
+
+      <footer class="demo-footer">
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h4>About</h4>
+            <p>Short bio line.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Work</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#">Email</a></li>
+              <li><a href="#">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="copyright">© 2025 — All rights reserved</p>
+      </footer>
+    </section>
+
+  </div>
+
+</body>
+</html>
