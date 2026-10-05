@@ -1,6 +1,4 @@
-# IYF S12 · Week 02 · Lesson 3
-
-CSS Foundations — Lesson 3 tasks covering setup, box model, typography, and color.
+# CSS Foundations — covering setup, box model, typography, and color.
 
 ## Contents
 
@@ -20,9 +18,3 @@ CSS Foundations — Lesson 3 tasks covering setup, box model, typography, and co
 
 Modular scale based on 16px, ratio ~1.125 → 12px to 36px (`--font-xs` to `--font-4xl`).
 
-## How to view
-
-Open `index.html` in a browser, or serve locally:
-
-```bash
-python3 -m http.server 8000
