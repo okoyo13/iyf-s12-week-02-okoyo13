@@ -1,6 +1,6 @@
-# IYF S12 · Week 02 · Lessons 3 & 4
+# Lessons 3 & 4
 
-This repository contains my Lesson 3 and Lesson 4 work for the IYF S12 program,
+This repository contains my Lesson 3 and Lesson 4 work,
 focused on CSS foundations and responsive layout. Lesson 3 covered base
 styling, the box model, a modular typography system, and a color scheme built
 with custom properties. Lesson 4 builds on that foundation with Flexbox, CSS
@@ -82,9 +82,5 @@ system, and color scheme. All Lesson 4 tasks are complete: Flexbox layout,
 CSS Grid layout, mobile-first responsive design, and polish. Everything is
 committed and pushed to the `main` branch.
 
-## Author
 
-Built by Alex Morgan — replace with your name and GitHub handle before
-committing. This project is part of the IYF S12 web development program,
-Week 02.
 
