@@ -1,6 +1,3 @@
-# Live Demo
-[Live site](https://okoyo13.github.io/iyf-s12-week-02-okoyo13/)
-
 This repository contains my Lesson 3 and Lesson 4 work,
 focused on CSS foundations and responsive layout. Lesson 3 covered base
 styling, the box model, a modular typography system, and a color scheme built
@@ -83,5 +80,8 @@ system, and color scheme. All Lesson 4 tasks are complete: Flexbox layout,
 CSS Grid layout, mobile-first responsive design, and polish. Everything is
 committed and pushed to the `main` branch.
 
+# Live Demo
+
+## [Live site](https://okoyo13.github.io/iyf-s12-week-02-okoyo13/)
 
 
