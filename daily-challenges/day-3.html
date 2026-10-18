@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 3: Hero Section</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.7;
+    }
+
+    .hero-link {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 6px;
+      background-color: #2563eb;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-link:hover {
+      background-color: #1d4ed8;
+    }
+
+    .hero-link:focus-visible {
+      outline: 3px solid white;
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Discover the Beauty of Nature</h1>
+
+        <p>
+          Explore breathtaking landscapes, find inspiration in the
+          outdoors, and discover new places to create unforgettable
+          memories.
+        </p>
+
+        <a
+          class="hero-link"
+          href="https://developer.mozilla.org/en-US/docs/Learn_web_development"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore More
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

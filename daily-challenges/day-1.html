@@ -1,0 +1,129 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 - Semantic Button Styles</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #1f2937;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .button-section {
+            margin-top: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s,
+                        border-color 0.3s;
+        }
+
+        .primary {
+            background-color: #2563eb;
+            color: white;
+            border: 2px solid #2563eb;
+        }
+
+        .primary:hover {
+            background-color: #1d4ed8;
+            border-color: #1d4ed8;
+        }
+
+        .secondary {
+            background-color: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .secondary:hover {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .danger {
+            background-color: #dc2626;
+            color: white;
+            border: 2px solid #dc2626;
+        }
+
+        .danger:hover {
+            background-color: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .disabled {
+            background-color: #d1d5db;
+            color: #6b7280;
+            border: 2px solid #d1d5db;
+            cursor: not-allowed;
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid #111827;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>Day 1: Button Styles</h1>
+            <p>Examples of four button styles with hover states.</p>
+        </header>
+
+        <section class="button-section" aria-labelledby="buttons-heading">
+            <h2 id="buttons-heading">Button Examples</h2>
+
+            <div class="button-container">
+                <button type="button" class="btn primary">
+                    Primary
+                </button>
+
+                <button type="button" class="btn secondary">
+                    Secondary
+                </button>
+
+                <button type="button" class="btn danger">
+                    Danger
+                </button>
+
+                <button type="button" class="btn disabled" disabled>
+                    Disabled
+                </button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+```

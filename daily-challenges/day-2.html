@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2: Card Component</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #222;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      max-width: 350px;
+      margin: 0 auto;
+      overflow: hidden;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .card-image {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .tag {
+      padding: 5px 10px;
+      border-radius: 15px;
+      background-color: #e8f0fe;
+      color: #174ea6;
+      font-size: 12px;
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      border-radius: 5px;
+      background-color: #2563eb;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .card-link:hover {
+      background-color: #1d4ed8;
+    }
+
+    .card-link:focus-visible {
+      outline: 3px solid #111;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Day 2: Card Component</h1>
+      <p>A reusable card built with semantic HTML.</p>
+    </header>
+
+    <article class="card" aria-labelledby="card-title">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+        alt="Laptop and workspace on a desk"
+      >
+
+      <section class="card-content">
+        <div class="tags" aria-label="Card categories">
+          <span class="tag">Technology</span>
+          <span class="tag">Web Development</span>
+        </div>
+
+        <h2 id="card-title">Learn Web Development</h2>
+
+        <p>
+          Discover the basics of building websites with HTML, CSS,
+          and JavaScript. Practice your skills by creating projects
+          for the web.
+        </p>
+
+        <a
+          class="card-link"
+          href="https://developer.mozilla.org/en-US/docs/Learn_web_development"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn More
+        </a>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

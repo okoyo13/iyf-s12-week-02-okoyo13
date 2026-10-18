@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5: Responsive Footer</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+    }
+
+    main {
+      min-height: 50vh;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .site-footer {
+      padding: 40px 20px 20px;
+      background-color: #111827;
+      color: #f9fafb;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column h2 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .footer-column p {
+      color: #d1d5db;
+      line-height: 1.7;
+    }
+
+    .footer-column ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 12px;
+    }
+
+    .footer-column a {
+      color: #d1d5db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: #60a5fa;
+    }
+
+    .footer-column a:focus-visible {
+      outline: 2px solid #60a5fa;
+      outline-offset: 4px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .social-links a {
+      font-size: 24px;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #374151;
+      text-align: center;
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 500px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Day 5: Responsive Footer</h1>
+    <p>Resize your browser window to see how the footer layout changes.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <section class="footer-column" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Us</h2>
+        <p>
+          We create useful digital experiences and share resources
+          to help people learn and grow.
+        </p>
+      </section>
+
+      <nav class="footer-column" aria-labelledby="quick-links-heading">
+        <h2 id="quick-links-heading">Quick Links</h2>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-heading">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-column" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Resources</h2>
+        <ul>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+              HTML Guide
+            </a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+              CSS Guide
+            </a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+              JavaScript Guide
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="footer-column" aria-labelledby="social-heading">
+        <h2 id="social-heading">Follow Us</h2>
+        <div class="social-links">
+          <a href="https://www.facebook.com/"
+             aria-label="Facebook">📘</a>
+          <a href="https://www.instagram.com/"
+             aria-label="Instagram">📸</a>
+          <a href="https://www.linkedin.com/"
+             aria-label="LinkedIn">💼</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rodricks Okoyo. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
