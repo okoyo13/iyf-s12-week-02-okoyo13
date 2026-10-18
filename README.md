@@ -1,4 +1,5 @@
-# **Live site:** https://okoyo13.github.io/iyf-s12-week-02-okoyo13/
+# Live Demo
+[Live site](https://okoyo13.github.io/iyf-s12-week-02-okoyo13/)
 
 This repository contains my Lesson 3 and Lesson 4 work,
 focused on CSS foundations and responsive layout. Lesson 3 covered base
